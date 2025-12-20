@@ -1,0 +1,36 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*************** Forside: billede og skrift *********************/
+
+.grid_1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+}
+
+.pic1 {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  object-fit: cover;
+  grid-column: 1;
+  grid-row: 1;
+  margin-bottom: 4rem;
+  height: 70vh;
+}
+
+.overskrift1 {
+  grid-column: 1;
+  grid-row: 1;
+  place-self: center;
+}

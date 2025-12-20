@@ -1,0 +1,28 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*************** Primærfarver *********************/
+:root {
+  --color-baggrundsfarve: #fceee6;
+  --color-footerfarve: #ad6c54;
+  --color-knapfarve-rammefarve: #ad6c54;
+  --color-boksfarve: #ad6c54;
+}
+
+/*************** Forside skrift styling *********************/
+.overskrift1 {
+  background-color: var(--color-knapfarve-rammefarve);
+  padding: 15px 25px;
+  border: 2px solid white;
+  color: white;
+  font-size: 2rem;
+}
