@@ -34,3 +34,9 @@ img {
   grid-row: 1;
   place-self: center;
 }
+
+@media screen and (min-width: 800px) {
+  .pic1 {
+    height: 100vh;
+  }
+}
