@@ -39,4 +39,10 @@ img {
   .pic1 {
     height: 100vh;
   }
+
+  .grid_1-1 {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+  }
 }
