@@ -10,6 +10,10 @@ img {
   display: block;
 }
 
+body {
+  background-color: var(--color-baggrundsfarve);
+}
+
 /*************** Primærfarver *********************/
 :root {
   --color-baggrundsfarve: #fceee6;
@@ -20,9 +24,27 @@ img {
 
 /*************** Forside skrift styling *********************/
 .overskrift1 {
-  background-color: var(--color-knapfarve-rammefarve);
-  padding: 15px 25px;
-  border: 2px solid white;
-  color: white;
-  font-size: 2rem;
+  color: #ffffff;
+  font-size: 3rem;
+  font-family: "Birthstone";
+}
+
+/*************** Næste afsnit: Velkommen *********************/
+.overskrift2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.tekst {
+  font-family: "Roboto";
+  width: 380px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 800px) {
+  .overskrift1 {
+    font-size: 4rem;
+  }
 }
