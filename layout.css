@@ -35,14 +35,54 @@ img {
   place-self: center;
 }
 
+/*************** Ommig: billede og skrift *********************/
+
+.pic2 {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  object-fit: cover;
+  grid-column: 1;
+  grid-row: 1;
+  margin-bottom: 4rem;
+  height: 40vh;
+}
+
 @media screen and (min-width: 800px) {
+  /*************** Forside: billede *********************/
   .pic1 {
     height: 100vh;
   }
 
+  /*************** Forside: 2xbilledeogknap *********************/
   .grid_1-1 {
     display: flex;
     justify-content: center;
+  }
+
+  /*************** Ommig: billede *********************/
+  .pic2 {
+    height: 80vh;
+  }
+
+  /*************** Ommig: billede og tekst ved siden af hinanden *********************/
+  .grid_1-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 10rem;
+  }
+
+  .billedeogtekst {
+    order: 1; /*************** bytter rundt på billedet og teksten *************/
+  }
+
+  /*************** Om mig: 2x uddannelse bokse  *********************/
+  .grid_2-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    justify-content: center; /* flytter hele boksen der er i grid i midten */
+    max-width: 600px; /* er med til at begrænse bredten på gridet altså gøres smallere */
+    margin: 0 auto; /* centrer det hele samme afstand */
   }
 }
