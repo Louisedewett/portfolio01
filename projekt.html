@@ -23,6 +23,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="layout.css">
@@ -30,17 +33,101 @@
 
 <body>
     <header>
+        <a href="index.html">
+            <div class="logo">My</div>
+        </a>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="ommig.html">Om mig</a></li>
+                <li><a href="projekt.html">Projekter</a></li>
+            </ul>
+            <button class="burger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+
+        </nav>
 
     </header>
 
     <main>
 
+        <h3 class="overskrift3">Mine projekter</h3>
+
+        <section class="grid_1-4">
+
+            <div class="boks pink">
+                <h2>Tema02</h2>
+                <p>-studiestartsprøve</p>
+
+                <div popover id="dialog1">
+                    <div class="indhold1">
+                        <h3 class="overskrift3">Løsning</h3>
+                        <div class="computermedindhold">
+                            <img class="computerindhold" src="./billeder/pictema02.webp" alt="indhold">
+                            <img class="computerramme" src="./billeder/macbook.webp" alt="computer">
+                        </div>
+
+                        <p class="tekst">Mit første site havde fokus på den grundlæggende struktur samt de basale
+                            færdigheder, som danner fundamentet for en
+                            multimediedesignerstuderende. Opgaven omhandlede den generelle læring om opsætningen af et
+                            site
+                            med tekst, billeder samt
+                            navigationsmenu.
+                            Sitet blev kodet responsivt sådan at det både tilpassede sig mobilversion og desktopversion.
+                            På
+                            den måde var det med til
+                            at give en god brugeroplevelse på tværs af enhederne.</p>
+
+                        <button popovertarget="dialog1" class="close_btn1">Luk tema02</button>
+                    </div>
+                </div>
+                <button popovertarget="dialog1" class="cta_btn">Læs mere</button>
+
+
+
+            </div>
+
+            <div class="boks beige">
+                <h2>Tema03</h2>
+                <p>-Emnesite</p>
+            </div>
+
+            <div class="boks brun">
+                <h2>Tema04</h2>
+                <p>-Emergencysite</p>
+            </div>
+
+            <div class="boks sort">
+                <h2>Tema05</h2>
+                <p>-tatoveringssite</p>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
+    <footer class="footer">
+        <div class="venstreside">
+            <a class="ommigknap" href="ommig.html">Om mig</a>
+            <a class="projekterknap" href="projekt.html">Projekter</a>
+
+        </div>
+
+
+        <div class="midten">
+            <p class="foelg">Følg med her</p>
+            <div class="socialemedier">
+                <a href="https://www.instagram.com/louisedewett/"><img class="instagram"
+                        src="./ikoner/instagramlogo.webp" alt="instagram"></a>
+                <a href="https://www.facebook.com/?locale=da_DK"><img class="facebook" src="./ikoner/facebooklogo.webp"
+                        alt="facebook"></a>
+
+            </div>
+        </div>
 
     </footer>
-
     <script src="./js/burger.js"></script>
     <script src="./js/dropdown.js"></script>
     <script src="./js/main.js"></script>

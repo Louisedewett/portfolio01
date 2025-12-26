@@ -22,6 +22,73 @@ body {
   --color-boksfarve: #f1cdb9;
 }
 
+/*************** Menu *********************/
+
+/******* Menu: Logo *******/
+.logo {
+  font-size: 5rem;
+  color: #ad6c54;
+  font-family: "Playfair Display", serif;
+}
+
+/******* Menulayout ********/
+header {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-footerfarve);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
+}
+
+.menu li {
+  margin-right: 5px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  text-decoration: none;
+  padding: 10px 30px;
+  color: white;
+  background-color: var(--color-knapfarve-rammefarve);
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+
+.knapheader a:hover {
+  color: #ba6028;
+}
+
 /*************** Forside: Skrift styling *********************/
 .overskrift1 {
   color: #ffffff;
@@ -48,7 +115,7 @@ body {
 
 /*************** Forside: Læs mere afsnit *********************/
 .overskrift3 {
-  font-family: "Birthstone";
+  font-family: "Parisienne";
   font-size: 2.2rem;
   font-weight: lighter;
   background-color: var(--color-boksfarve);
@@ -90,7 +157,7 @@ body {
   display: flex;
   justify-content: center; /*************** Gør så billedet sidder i midten *********************/
 }
-.picafmig {
+.picafmig2 {
   border-radius: 80px 80px 0px 0px;
   width: 220px;
   overflow: hidden;
@@ -166,27 +233,27 @@ body {
 .scroll {
   overflow: hidden;
   width: 100%;
-  box-sizing: border-box;
 }
 
 .scrollinner {
-  display: flex;
-  width: calc(200%);
+  display: flex; /********* Placeres vandret som en række efter hinanden **********/
+  width: 200%; /********* gør at boksene er dobbelt så bred som containeren **********/
   animation: scroll 15s linear infinite;
 }
 
 .scrollinner img {
-  height: 100px;
+  height: 80px;
+  width: auto;
   margin-right: 20px;
   margin-top: 2rem;
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
 }
 
 @keyframes scroll {
-  0% {
+  from {
     transform: translateX(0);
   }
-  100% {
+  to {
     transform: translateX(-50%);
   }
 }
@@ -195,10 +262,102 @@ body {
   animation-play-state: paused;
 }
 
+/*************** Projekter: 4x bokse *********************/
+
+.boks {
+  width: 350px;
+  padding: 60px;
+  margin: 2rem auto;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+}
+
+.pink {
+  background-color: #e6b1bb;
+}
+
+.beige {
+  background-color: #dfcdc3;
+}
+
+.brun {
+  background-color: #99726d;
+}
+
+.sort {
+  background-color: #616161;
+}
+
+.cta_btn {
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px 15px;
+  margin-top: 2rem;
+}
+
+button {
+  position: sticky;
+  top: 0;
+  justify-self: end;
+}
+
+&:popover-open {
+  display: grid;
+}
+
+[popover] {
+  padding: 1rem;
+  max-height: 100vh;
+  max-width: 1000px;
+  width: 90vw;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /*************** Gør så boksen kommer i midten på plads *************/
+}
+
+&::backdrop {
+  background: #0008;
+}
+
+.indhold1 {
+  background-color: var(--color-baggrundsfarve);
+  padding: 1rem;
+  text-align: left;
+}
+
+/*************** Projekter: indhold i tema02 *********************/
+
+.computermedindhold {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.computerramme {
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 2;
+  position: relative;
+}
+
+.computerindhold {
+  position: absolute;
+  top: 9%;
+  left: 12%;
+  width: 76%;
+  height: auto;
+  object-fit: cover;
+  z-index: 1;
+}
+
 /*************** Footer *********************/
 .footer {
   background-color: var(--color-footerfarve);
-  padding: 50px;
+  padding: 4rem;
 }
 
 .ommigknap,
@@ -245,11 +404,46 @@ body {
   }
 }
 
-.tekst {
-  margin: 0 auto; /* centrerer boksen af teksten så det står i midten */
-}
+/*************** Menulayout *********************/
 
-.scrollinner img {
-  height: 120px;
-  width: auto;
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+    background-color: transparent;
+    border: 0;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: var(--color-footerfarve);
+    position: absolute;
+    top: 130px;
+    right: 0;
+    width: auto;
+  }
+
+  nav.active .menu li {
+    margin: 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 1rem;
+  }
 }

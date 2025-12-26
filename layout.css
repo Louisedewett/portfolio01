@@ -57,6 +57,7 @@ img {
   .grid_1-1 {
     display: flex;
     justify-content: center;
+    gap: 50px;
   }
 
   /*************** Ommig: billede *********************/
@@ -81,8 +82,15 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    justify-content: center; /* flytter hele boksen der er i grid i midten */
     max-width: 600px; /* er med til at begrænse bredten på gridet altså gøres smallere */
     margin: 0 auto; /* centrer det hele samme afstand */
+  }
+
+  /*************** Projekter: 2x bokse  *********************/
+  .grid_1-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto 8rem;
+    max-width: 800px;
   }
 }
