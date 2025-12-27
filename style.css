@@ -26,9 +26,10 @@ body {
 
 /******* Menu: Logo *******/
 .logo {
-  font-size: 5rem;
-  color: #ad6c54;
-  font-family: "Playfair Display", serif;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
 /******* Menulayout ********/
@@ -36,7 +37,7 @@ header {
   position: sticky;
   top: 0;
   background-color: var(--color-footerfarve);
-  padding: 15px 20px;
+  padding: 10px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,7 +55,7 @@ header {
 }
 
 .menu li:last-child {
-  margin-right: 0;
+  margin-right: 2rem;
 }
 
 .menu a {
@@ -238,7 +239,7 @@ header {
 .scrollinner {
   display: flex; /********* Placeres vandret som en række efter hinanden **********/
   width: 200%; /********* gør at boksene er dobbelt så bred som containeren **********/
-  animation: scroll 15s linear infinite;
+  animation: scroll 10s linear infinite;
 }
 
 .scrollinner img {
@@ -296,6 +297,13 @@ header {
   margin-top: 2rem;
 }
 
+.close_btn1 {
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px 15px;
+  margin-top: 2rem;
+}
+
 button {
   position: sticky;
   top: 0;
@@ -328,6 +336,23 @@ button {
   text-align: left;
 }
 
+.indhold2 {
+  background-color: var(--color-baggrundsfarve);
+  padding: 1rem;
+  text-align: left;
+}
+
+.indhold3 {
+  background-color: var(--color-baggrundsfarve);
+  padding: 1rem;
+  text-align: left;
+}
+
+.indhold4 {
+  background-color: var(--color-baggrundsfarve);
+  padding: 1rem;
+  text-align: left;
+}
 /*************** Projekter: indhold i tema02 *********************/
 
 .computermedindhold {
