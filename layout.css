@@ -33,6 +33,10 @@ img {
   grid-column: 1;
   grid-row: 1;
   place-self: center;
+  background-color: rgba(33, 30, 30, 0.5);
+  padding: 5px 5px;
+  color: white;
+  font-size: 2rem;
 }
 
 /*************** Ommig: billede og skrift *********************/
@@ -50,7 +54,11 @@ img {
 @media screen and (min-width: 800px) {
   /*************** Forside: billede *********************/
   .pic1 {
-    height: 100vh;
+    height: 90vh;
+  }
+
+  .overskrift1 {
+    font-size: 4rem;
   }
 
   /*************** Forside: 2xbilledeogknap *********************/

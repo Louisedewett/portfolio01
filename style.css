@@ -26,7 +26,7 @@ body {
 
 /******* Menu: Logo *******/
 .logo {
-  width: 10rem;
+  width: 8rem;
   display: flex;
   justify-content: center;
   margin-top: 1rem;
@@ -37,7 +37,6 @@ header {
   position: sticky;
   top: 0;
   background-color: var(--color-footerfarve);
-  padding: 10px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -60,7 +59,6 @@ header {
 
 .menu a {
   display: block;
-  text-decoration: none;
   padding: 10px 30px;
   color: white;
   background-color: var(--color-knapfarve-rammefarve);
@@ -72,6 +70,7 @@ header {
   width: 30px;
   height: 20px;
   cursor: pointer;
+  margin: 1rem;
 }
 
 .burger .line {
@@ -150,7 +149,14 @@ header {
   color: white;
   padding: 10px 30px;
   font-family: "Playfair Display", serif;
-  text-decoration: none;
+}
+
+.knap1:hover {
+  background-color: #cc582d;
+}
+
+.knap2:hover {
+  background-color: #cc582d;
 }
 
 /*************** Om mig: potræt af mig x2 *********************/
@@ -227,6 +233,18 @@ header {
 
 .liste li {
   margin-bottom: 0.6rem;
+}
+
+/*************** Om mig: overskrift4 *********************/
+.overskrift4 {
+  font-family: "Parisienne";
+  font-size: 2.2rem;
+  font-weight: lighter;
+  background-color: var(--color-boksfarve);
+  padding: 15px;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
 }
 
 /*************** Om mig: Værktøjer *********************/
@@ -382,7 +400,10 @@ button {
 /*************** Footer *********************/
 .footer {
   background-color: var(--color-footerfarve);
-  padding: 4rem;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .ommigknap,
@@ -391,7 +412,6 @@ button {
   width: fit-content; /* tilpasser knappens bredde som til teksten */
   background-color: var(--color-knapfarve-rammefarve);
   color: white;
-  text-decoration: none;
   padding: 10px 30px;
   font-family: "Playfair Display", serif;
   margin-bottom: 20px;
@@ -401,6 +421,7 @@ button {
   display: flex;
   flex-direction: column; /* ligger lodret */
   align-items: center;
+  margin: 0 auto;
 }
 
 .foelg {
@@ -409,11 +430,11 @@ button {
   font-size: 1rem;
   margin-bottom: 10px;
   border-bottom: 2px solid white;
+  margin-top: 130px;
 }
 
 .socialemedier {
   display: flex;
-  justify-content: center;
   gap: 16px;
 }
 
