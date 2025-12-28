@@ -58,7 +58,7 @@ img {
   }
 
   .overskrift1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   /*************** Forside: 2xbilledeogknap *********************/
@@ -100,5 +100,13 @@ img {
     grid-template-columns: 1fr 1fr;
     margin: 0 auto 8rem;
     max-width: 800px;
+  }
+
+  /*************** Projekter: tema02  *********************/
+
+  .grid1-1 {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
   }
 }
