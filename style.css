@@ -252,11 +252,12 @@ header {
 .scroll {
   overflow: hidden;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .scrollinner {
   display: flex; /********* Placeres vandret som en række efter hinanden **********/
-  width: 200%; /********* gør at boksene er dobbelt så bred som containeren **********/
   animation: scroll 10s linear infinite;
 }
 
@@ -309,11 +310,11 @@ header {
 }
 
 .beige {
-  background-color: #dfcdc3;
+  background-color: #e3cec3;
 }
 
 .brun {
-  background-color: #99726d;
+  background-color: #f9d9c8;
 }
 
 .sort {
@@ -386,7 +387,7 @@ button {
   padding: 1rem;
   text-align: left;
 }
-/*************** Projekter: indhold i tema02 *********************/
+/*************** Projekter: computerindhold i tema02 *********************/
 
 .computerogindhold {
   position: relative;
@@ -414,13 +415,37 @@ button {
 
 .pic1layout,
 .pic2layout {
-  width: 70%;
-  display: block;
-  margin: 0 auto 1rem;
   border: 1.5px solid #ad6c54;
+  margin: 2rem auto;
+  width: 90%;
 }
 
-/*************** Projekter: indhold i tema03 *********************/
+/*************** Projekter: iphoneindhold i tema02 *********************/
+.iphoneogindhold {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.iphoneramme {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative; /********* ligger ovenpå containeren og gør så absolutelementet kan ligge indeni *************/
+  z-index: 2; /*************** Ligger foran indholdet *************/
+}
+
+.iphoneindhold {
+  position: absolute; /******* gør det muligt at placere elementerne inden i relativ (containeren) *************/
+  top: 13%;
+  left: 32%;
+  width: 37%;
+  height: 74%;
+  object-fit: cover;
+  z-index: 1; /*************** Ligger bag i rammen *************/
+  border-radius: 15px;
+}
 
 /*************** Footer *********************/
 .footer {
@@ -476,10 +501,13 @@ button {
 
   /*************** Projekter: boks Teme02 *********************/
   .computerogindhold {
-    width: 450px;
+    width: 390px;
+  }
+
+  .iphoneogindhold {
+    width: 390px;
   }
 }
-
 /*************** Menulayout *********************/
 
 @media screen and (max-width: 800px) {
