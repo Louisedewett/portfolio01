@@ -105,8 +105,9 @@ img {
   /*************** Projekter: tema02  *********************/
 
   .grid1-1 {
-    display: flex;
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    margin: 0 auto;
+    max-width: 800px;
   }
 }
