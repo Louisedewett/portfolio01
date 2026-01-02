@@ -35,11 +35,14 @@ img {
   place-self: center;
   background-color: rgba(33, 30, 30, 0.5);
   padding: 5px 5px;
-  color: white;
-  font-size: 2rem;
 }
 
 /*************** Ommig: billede og skrift *********************/
+.overskrift1-1 {
+  grid-column: 1;
+  grid-row: 1;
+  place-self: center;
+}
 
 .pic2 {
   grid-template-columns: 1fr;
@@ -47,18 +50,14 @@ img {
   object-fit: cover;
   grid-column: 1;
   grid-row: 1;
-  margin-bottom: 4rem;
-  height: 40vh;
+  margin-bottom: 3.5rem;
+  height: 55vh;
 }
 
 @media screen and (min-width: 800px) {
   /*************** Forside: billede *********************/
   .pic1 {
     height: 90vh;
-  }
-
-  .overskrift1 {
-    font-size: 3.5rem;
   }
 
   /*************** Forside: 2xbilledeogknap *********************/
@@ -90,7 +89,7 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    max-width: 600px; /* er med til at begrænse bredten på gridet altså gøres smallere */
+    max-width: 900px; /* er med til at begrænse bredten på gridet altså gøres smallere */
     margin: 0 auto; /* centrer det hele samme afstand */
   }
 
@@ -108,6 +107,6 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 700px;
   }
 }

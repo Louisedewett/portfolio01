@@ -26,7 +26,7 @@ body {
 
 /******* Menu: Logo *******/
 .logo {
-  width: 8rem;
+  width: 7rem;
   display: flex;
   justify-content: center;
   margin-top: 1rem;
@@ -63,7 +63,7 @@ header {
   color: white;
   background-color: var(--color-knapfarve-rammefarve);
   font-family: "Playfair Display", serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .burger {
@@ -91,31 +91,34 @@ header {
 
 /*************** Forside: Skrift styling *********************/
 .overskrift1 {
-  color: #ffffff;
-  font-size: 3rem;
+  color: white;
+  font-size: 2rem;
   font-family: "Birthstone";
   font-weight: lighter;
 }
 
 /*************** Forside: Velkommenafsnit *********************/
 .overskrift2 {
-  font-family: "Playfair Display", serif;
-  font-size: 1.4rem;
+  font-family: "Playfair Display";
+  font-size: 1.1rem;
   text-align: center;
   font-weight: lighter;
+  margin-bottom: 1rem;
 }
 
 .tekst {
   font-family: "Roboto";
   max-width: 65ch;
-  padding: 25px;
+  font-size: 0.9rem;
+  padding: 0 15px;
   font-weight: 300;
   margin: 0 auto; /* centrerer boksen af teksten så det står i midten */
+  line-height: 1.5;
 }
 
 /*************** Forside: Læs mere afsnit *********************/
 .overskrift3 {
-  font-family: "Parisienne";
+  font-family: "Italianno";
   font-size: 2.2rem;
   font-weight: lighter;
   background-color: var(--color-boksfarve);
@@ -149,14 +152,23 @@ header {
   color: white;
   padding: 10px 30px;
   font-family: "Playfair Display", serif;
+  font-size: 1rem;
 }
 
 .knap1:hover {
-  background-color: #cc582d;
+  background-color: #ae4a26;
 }
 
 .knap2:hover {
-  background-color: #cc582d;
+  background-color: #ae4a26;
+}
+
+/*************** Om mig: Overskrift *********************/
+.overskrift1-1 {
+  color: white;
+  font-size: 2.8rem;
+  font-family: "Birthstone";
+  font-weight: lighter;
 }
 
 /*************** Om mig: potræt af mig x2 *********************/
@@ -169,7 +181,6 @@ header {
   width: 220px;
   overflow: hidden;
   border: 3px solid #ad6c54;
-  margin-bottom: 3rem;
   margin-top: 1rem;
 }
 
@@ -177,7 +188,7 @@ header {
 .dropdown {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .dropdown_btn {
@@ -185,7 +196,7 @@ header {
   color: #000;
   border: none;
   font-family: "Playfair Display", serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: lighter;
   transition-property: color; /******** Hvad: altså hvilken skal den transformere her farven ************/
   transition-duration: 0.3s; /*************** hvor langt tid transiotion skal vare *********************/
@@ -215,8 +226,15 @@ header {
   border: 1.5px solid #ad6c54;
   padding: 30px;
   width: 270px;
-  margin-bottom: 2rem;
-  margin: 0 auto 1.5rem;
+  margin: 30px auto 20px auto; /****** 30px(top), auto(right, midten) 20px(bottom) auto(left,midten)  ********/
+  border-radius: 2px;
+}
+
+.boks2 {
+  border: 1.5px solid #ad6c54;
+  padding: 30px;
+  width: 270px;
+  margin: 30px auto 20px auto; /******  ********/
   border-radius: 2px;
 }
 
@@ -224,6 +242,9 @@ header {
   list-style: none;
   padding: 0;
   margin: 0;
+  font-family: "Roboto";
+  font-size: 0.9rem;
+  font-weight: 300;
 }
 
 .liste li::before {
@@ -232,12 +253,12 @@ header {
 }
 
 .liste li {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
 }
 
 /*************** Om mig: overskrift4 *********************/
 .overskrift4 {
-  font-family: "Parisienne";
+  font-family: "Italianno";
   font-size: 2.2rem;
   font-weight: lighter;
   background-color: var(--color-boksfarve);
@@ -295,7 +316,7 @@ header {
 
 .temaoverskrift {
   font-family: "Playfair Display", serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   text-align: center;
   font-weight: lighter;
 }
@@ -303,6 +324,7 @@ header {
 .emneskrift {
   font-family: "Roboto";
   font-weight: 300;
+  font-size: 0.9rem;
 }
 
 .pink {
@@ -310,11 +332,11 @@ header {
 }
 
 .beige {
-  background-color: #e3cec3;
+  background-color: #dcc0b2;
 }
 
 .brun {
-  background-color: #f9d9c8;
+  background-color: #f4d1bf;
 }
 
 .sort {
@@ -327,6 +349,7 @@ header {
   padding: 10px 15px;
   margin-top: 2rem;
   font-family: "Playfair Display", serif;
+  font-size: 0.9rem;
 }
 
 .close_btn1 {
@@ -334,7 +357,10 @@ header {
   border: 1px solid rgb(255, 255, 255);
   padding: 10px 15px;
   margin-top: 2rem;
+  margin-left: 4rem;
+  margin-bottom: 2rem;
   font-family: "Playfair Display", serif;
+  font-size: 0.9rem;
   color: white;
 }
 
@@ -351,7 +377,7 @@ button {
 [popover] {
   padding: 1rem;
   max-height: 100vh;
-  max-width: 1000px;
+  max-width: 1100px;
   width: 90vw;
 
   position: fixed;
@@ -387,6 +413,7 @@ button {
   padding: 1rem;
   text-align: left;
 }
+
 /*************** Projekter: computerindhold i tema02 *********************/
 
 .computerogindhold {
@@ -401,6 +428,8 @@ button {
   display: block;
   position: relative;
   z-index: 2;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
 }
 
 .computerindhold {
@@ -413,11 +442,26 @@ button {
   z-index: 1;
 }
 
+.tekst1 {
+  font-family: "Roboto";
+  max-width: 65ch;
+  font-size: 0.9rem;
+  font-weight: 300;
+  padding: 10px 20px;
+  margin: 0 auto; /* centrerer boksen af teksten så det står i midten */
+  line-height: 1.5;
+}
 .pic1layout,
 .pic2layout {
-  border: 1.5px solid #ad6c54;
   margin: 2rem auto;
-  width: 90%;
+  margin-top: 3rem;
+}
+
+.pic1layout img,
+.pic2layout img {
+  max-width: 300px;
+  margin: 0 auto;
+  border: 1.5px solid #ad6c54;
 }
 
 /*************** Projekter: iphoneindhold i tema02 *********************/
@@ -447,6 +491,59 @@ button {
   border-radius: 15px;
 }
 
+/*************** Projekter: Hjerte knap x4 *********************/
+.hjerte {
+  text-align: center;
+}
+
+.websitelink {
+  display: inline-block;
+  font-size: 5rem;
+  text-decoration: none;
+  color: #e6b1bb;
+  transition: transform 0.4s ease;
+}
+
+.websitelink:hover {
+  transform: scale(1.8);
+}
+
+.websitelink2 {
+  display: inline-block;
+  font-size: 5rem;
+  text-decoration: none;
+  color: #dcc0b2;
+  transition: transform 0.4s ease;
+}
+
+.websitelink2:hover {
+  transform: scale(1.8);
+}
+
+.websitelink3 {
+  display: inline-block;
+  font-size: 5rem;
+  text-decoration: none;
+  color: #f4d1bf;
+  transition: transform 0.4s ease;
+}
+
+.websitelink3:hover {
+  transform: scale(1.8);
+}
+
+.websitelink4 {
+  display: inline-block;
+  font-size: 5rem;
+  text-decoration: none;
+  color: #616161;
+  transition: transform 0.4s ease;
+}
+
+.websitelink4:hover {
+  transform: scale(1.8);
+}
+
 /*************** Footer *********************/
 .footer {
   background-color: var(--color-footerfarve);
@@ -465,6 +562,7 @@ button {
   padding: 10px 30px;
   font-family: "Playfair Display", serif;
   margin-bottom: 20px;
+  font-size: 1rem;
 }
 
 .midten {
@@ -494,20 +592,113 @@ button {
 }
 
 @media screen and (min-width: 800px) {
+  /******* Menu: Logo *******/
+  .logo {
+    width: 12rem;
+  }
+
   /*************** Overskrift over forsidebilledet *********************/
   .overskrift1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
+  }
+
+  /*************** Forside: Velkommenafsnit *********************/
+  .overskrift2 {
+    font-size: 1.6rem;
+  }
+
+  .tekst {
+    font-size: 1.2rem;
+    padding: 0 40px;
+  }
+
+  /*************** Forside: Læs mere afsnit *********************/
+  .overskrift3 {
+    font-size: 3.8rem;
+  }
+
+  /*************** Forside: 2xknapper *********************/
+  .knap1,
+  .knap2 {
+    font-size: 1.2rem;
+  }
+
+  /*************** Footer *********************/
+  .ommigknap,
+  .projekterknap {
+    font-size: 1.2rem;
+  }
+
+  .foelg {
+    font-size: 1.2rem;
+  }
+
+  /*************** Om mig: Overskrift *********************/
+  .overskrift1-1 {
+    font-size: 4.8rem;
+  }
+
+  /*************** Om mig: overskrift4 *********************/
+  .overskrift4 {
+    font-size: 3.2rem;
+  }
+
+  /*************** Om mig: dropdown skriftx2 *********************/
+  .dropdown_btn {
+    font-size: 1.5rem;
+  }
+
+  /*************** Om mig: uddannelse x2bokse *********************/
+  .liste {
+    font-size: 1.2rem;
+  }
+
+  .boks1 {
+    padding: 50px;
+    width: 400px;
+  }
+
+  .boks2 {
+    padding: 50px;
+    width: 400px;
+  }
+
+  /*************** Projekter: Skrifter x4bokse *********************/
+
+  .temaoverskrift {
+    font-size: 1.7rem;
+  }
+
+  .emneskrift {
+    font-size: 1.3rem;
+  }
+
+  .cta_btn {
+    font-size: 1.1rem;
+  }
+
+  .close_btn1 {
+    font-size: 1.1rem;
   }
 
   /*************** Projekter: boks Teme02 *********************/
   .computerogindhold {
-    width: 390px;
+    width: 100%;
+    max-width: 370px;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
   }
 
   .iphoneogindhold {
-    width: 390px;
+    width: 100%;
+    max-width: 370px;
+  }
+
+  .tekst1 {
+    font-size: 1.2rem;
   }
 }
+
 /*************** Menulayout *********************/
 
 @media screen and (max-width: 800px) {
@@ -538,7 +729,7 @@ button {
     display: block;
     background-color: var(--color-footerfarve);
     position: absolute;
-    top: 130px;
+    top: 85px;
     right: 0;
     width: auto;
   }
