@@ -145,6 +145,24 @@ header {
   border: 3px solid #ad6c54;
 }
 
+.picafmig {
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+
+.ommig:hover .picafmig {
+  transform: scale(1.2);
+}
+
+.picarbejdsprocess {
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+
+.projekter:hover .picarbejdsprocess {
+  transform: scale(1.2);
+}
+
 .knap1,
 .knap2 {
   margin-top: 1rem;
@@ -270,37 +288,39 @@ header {
 
 /*************** Om mig: Værktøjer *********************/
 
-.scroll {
-  overflow: hidden;
-  width: 100%;
-  display: flex;
-  justify-content: center;
+.yderikoner {
+  border: 1.5px solid #ad6c54;
+  padding: 20px 20px;
+  max-width: 500px;
+  margin: 3rem auto; /***** top/bottom 3rem og venstre/højre auto (centrer)****/
 }
 
-.scrollinner {
-  display: flex; /********* Placeres vandret som en række efter hinanden **********/
-  animation: scroll 10s linear infinite;
+.innerikoner {
+  overflow: hidden; /***** Gør så figurerne ikke fortsætter udover min indrammede boks ****/
 }
 
-.scrollinner img {
-  height: 80px;
-  width: auto;
-  margin-right: 20px;
-  margin-top: 2rem;
-  margin-bottom: 5rem;
+.animation {
+  display: flex; /***** ligger sig på en række ****/
+  gap: 0.5rem;
+  animation: scroll 30s linear infinite; /***** linear (konstant hastighed) infinite (gentager hele tiden)****/
 }
 
 @keyframes scroll {
   from {
-    transform: translateX(0);
+    transform: translateX(100%); /***** 100% af dens egen bredde (ikonerne starter udenfor boksen til højre)****/
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(-50%); /***** 50% af dens bredde (halvdelen af ikonrækken er ude af boksen til venstre) ****/
   }
 }
 
-.scrollinner:hover {
+.animation:hover {
   animation-play-state: paused;
+}
+
+.innerikoner img {
+  height: 55px;
+  width: auto;
 }
 
 /*************** Projekter: 4x bokse *********************/
@@ -372,6 +392,10 @@ button {
 
 &:popover-open {
   display: grid;
+}
+
+::backdrop {
+  backdrop-filter: blur(5px);
 }
 
 [popover] {
@@ -544,6 +568,23 @@ button {
   transform: scale(1.8);
 }
 
+/*************** Projekter: Transitions popover *********************/
+
+[popover] {
+  opacity: 0;
+  rotate: 180deg;
+  transition: 0.5s allow-discrete;
+}
+
+:popover-open {
+  opacity: 1;
+  rotate: none;
+  @starting-style {
+    opacity: 0;
+    rotate: -180deg;
+  }
+}
+
 /*************** Footer *********************/
 .footer {
   background-color: var(--color-footerfarve);
@@ -589,6 +630,11 @@ button {
 .socialemedier img {
   width: 40px;
   height: auto;
+  transition: transform 0.2s ease;
+}
+
+.socialemedier img:hover {
+  transform: scale(1.5);
 }
 
 @media screen and (min-width: 800px) {
@@ -661,6 +707,22 @@ button {
   .boks2 {
     padding: 50px;
     width: 400px;
+  }
+
+  /*************** Om mig: Værktøjer *********************/
+
+  .yderikoner {
+    padding: 30px 20px;
+    max-width: 1000px;
+  }
+
+  .innerikoner {
+    gap: 1rem;
+  }
+
+  .innerikoner img {
+    height: 70px;
+    width: auto;
   }
 
   /*************** Projekter: Skrifter x4bokse *********************/
