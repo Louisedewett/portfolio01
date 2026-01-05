@@ -14,17 +14,13 @@ img {
 
 .grid_1 {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  place-items: center;
+  grid-template-columns: 1fr; /*********** En kolone der fylder hele bredden ****************/
 }
 
 .pic1 {
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  object-fit: cover;
-  grid-column: 1;
-  grid-row: 1;
+  object-fit: cover; /*********** billedet fylder sin rette størrelse inden for boksen  ****************/
+  grid-column: 1; /*********** placere elementet i kolonnen ****************/
+  grid-row: 1; /*********** placere elementet i rækken ****************/
   margin-bottom: 4rem;
   height: 70vh;
 }
@@ -45,13 +41,17 @@ img {
 }
 
 .pic2 {
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
   object-fit: cover;
   grid-column: 1;
   grid-row: 1;
   margin-bottom: 3.5rem;
   height: 55vh;
+}
+
+/*************** Om mig: potræt af mig x2 *********************/
+.ommig2 {
+  display: flex;
+  justify-content: center; /*************** Gør så billedet sidder i midten *********************/
 }
 
 @media screen and (min-width: 800px) {
@@ -76,12 +76,12 @@ img {
   .grid_1-2 {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 10rem;
+    align-items: center; /*********** går så det hele er centreret korrekt med tekst og billede (lodret) *****************/
+    gap: 5rem;
   }
 
   .billedeogtekst {
-    order: 1; /*************** bytter rundt på billedet og teksten *************/
+    order: 1; /*************** ændre min rækkefølge i mit layout *************/
   }
 
   /*************** Om mig: 2x uddannelse bokse  *********************/
@@ -93,7 +93,7 @@ img {
     margin: 0 auto; /* centrer det hele samme afstand */
   }
 
-  /*************** Projekter: 2x bokse  *********************/
+  /*************** Projekter: 4x bokse  *********************/
   .grid_1-4 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -101,7 +101,7 @@ img {
     max-width: 800px;
   }
 
-  /*************** Projekter: tema02  *********************/
+  /*************** Projekter: indeni popuppen layout  *********************/
 
   .grid1-1 {
     display: grid;

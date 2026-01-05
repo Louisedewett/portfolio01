@@ -27,22 +27,20 @@ body {
 /******* Menu: Logo *******/
 .logo {
   width: 7rem;
-  display: flex;
-  justify-content: center;
   margin-top: 1rem;
 }
 
 /******* Menulayout ********/
 header {
-  position: sticky;
-  top: 0;
+  position: sticky; /******* forbliver og følger siden ********/
+  top: 0; /******* Hører sammen med sticky ( fast i toppen via scroll)  ********/
   background-color: var(--color-footerfarve);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /******* placere første element helt til venstre og andet helt til højre ********/
   align-items: center;
 }
 .menu {
-  display: flex;
+  display: flex; /******* menu punkterne kommer på række ********/
   list-style: none;
   margin: 0;
   padding: 0;
@@ -83,10 +81,6 @@ header {
 }
 .burger {
   display: none;
-}
-
-.knapheader a:hover {
-  color: #ba6028;
 }
 
 /*************** Forside: Skrift styling *********************/
@@ -132,26 +126,26 @@ header {
 
 .sektion {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /********** Lodret elementer ****************/
   align-items: center;
   margin-bottom: 3rem;
 }
 
 .ommig,
 .projekter {
-  border-radius: 80px 80px 0px 0px;
+  border-radius: 80px 80px 0px 0px; /********** gør så den øverste højre og venstre kant får sin bue *************/
   width: 220px;
-  overflow: hidden;
+  overflow: hidden; /********** Indholdet ude for boksen bliver skjult ***************/
   border: 3px solid #ad6c54;
 }
 
 .picafmig {
-  transform: scale(1);
+  transform: scale(1); /********** Dens normale størrelse ****************/
   transition: 0.3s ease-in-out;
 }
 
 .ommig:hover .picafmig {
-  transform: scale(1.2);
+  transform: scale(1.2); /********** Dens nye størrelse (Zoom) ****************/
 }
 
 .picarbejdsprocess {
@@ -190,10 +184,6 @@ header {
 }
 
 /*************** Om mig: potræt af mig x2 *********************/
-.ommig2 {
-  display: flex;
-  justify-content: center; /*************** Gør så billedet sidder i midten *********************/
-}
 .picafmig2 {
   border-radius: 80px 80px 0px 0px;
   width: 220px;
@@ -205,18 +195,17 @@ header {
 /*************** Om mig: Dropdown *********************/
 .dropdown {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /****** Ligger under hinanden *******/
   margin-top: 2rem;
 }
 
 .dropdown_btn {
   background-color: transparent;
-  color: #000;
   border: none;
   font-family: "Playfair Display", serif;
   font-size: 1.1rem;
   font-weight: lighter;
-  transition-property: color; /******** Hvad: altså hvilken skal den transformere her farven ************/
+  transition-property: color; /******** Transformerer farven ************/
   transition-duration: 0.3s; /*************** hvor langt tid transiotion skal vare *********************/
 }
 
@@ -232,11 +221,11 @@ header {
 }
 
 .dropdowntekst {
-  display: none; /****** Teksten inden i knappen forsvinder ********/
+  display: none; /****** Teksten skjules først ********/
 }
 
 .dropdowntekst.show {
-  display: block;
+  display: block; /****** Teksten bliver synlig ********/
 }
 
 /*************** Om mig: 2x uddannelse bokse *********************/
@@ -252,7 +241,7 @@ header {
   border: 1.5px solid #ad6c54;
   padding: 30px;
   width: 270px;
-  margin: 30px auto 20px auto; /******  ********/
+  margin: 30px auto 20px auto;
   border-radius: 2px;
 }
 
@@ -387,31 +376,27 @@ header {
 button {
   position: sticky;
   top: 0;
-  justify-self: end;
 }
 
-&:popover-open {
+[popover]:popover-open {
   display: grid;
-}
-
-::backdrop {
-  backdrop-filter: blur(5px);
 }
 
 [popover] {
   padding: 1rem;
   max-height: 100vh;
   max-width: 1100px;
-  width: 90vw;
+  width: 90vw; /*********** 90% af skærmens bredde *************/
 
-  position: fixed;
+  position: fixed; /*********** boksen er fast selvom du scroller *************/
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /*************** Gør så boksen kommer i midten på plads *************/
 }
 
-&::backdrop {
+[popover]::backdrop {
   background: #0008;
+  backdrop-filter: blur(5px);
 }
 
 .indhold1 {
@@ -438,7 +423,7 @@ button {
   text-align: left;
 }
 
-/*************** Projekter: computerindhold i tema02 *********************/
+/*************** Projekter: computerindhold i temaerne *********************/
 
 .computerogindhold {
   position: relative;
@@ -449,21 +434,20 @@ button {
 .computerramme {
   width: 100%;
   height: auto;
-  display: block;
-  position: relative;
-  z-index: 2;
+  position: relative; /********** gør så absolut elementet kan placere sig rigtigt ***********/
+  z-index: 2; /********** Ligger foran elementet ***********/
   margin-top: 4rem;
   margin-bottom: 2rem;
 }
 
 .computerindhold {
-  position: absolute;
+  position: absolute; /********** placeres rigtigt i computeren pga relative ***********/
   top: 2%;
   left: 10%;
   width: 80%;
   height: 88%;
   object-fit: cover;
-  z-index: 1;
+  z-index: 1; /********** Ligger bag elementet ***********/
 }
 
 .tekst1 {
@@ -521,7 +505,7 @@ button {
 }
 
 .websitelink {
-  display: inline-block;
+  display: inline-block; /*************** Elementet opfører sig som tekst men styles som en boks *************/
   font-size: 5rem;
   text-decoration: none;
   color: #e6b1bb;
@@ -571,13 +555,13 @@ button {
 /*************** Projekter: Transitions popover *********************/
 
 [popover] {
-  opacity: 0;
+  opacity: 0; /************ ikke synlig ************/
   rotate: 180deg;
-  transition: 0.5s allow-discrete;
+  transition: 0.5s allow-discrete; /************ pæn blød overgang ************/
 }
 
 :popover-open {
-  opacity: 1;
+  opacity: 1; /************ synlig ************/
   rotate: none;
   @starting-style {
     opacity: 0;
@@ -590,14 +574,11 @@ button {
   background-color: var(--color-footerfarve);
   padding: 50px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
 }
 
 .ommigknap,
 .projekterknap {
   display: block;
-  width: fit-content; /* tilpasser knappens bredde som til teksten */
   background-color: var(--color-knapfarve-rammefarve);
   color: white;
   padding: 10px 30px;
