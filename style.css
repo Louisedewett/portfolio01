@@ -136,7 +136,7 @@ header {
   border-radius: 80px 80px 0px 0px; /********** gør så den øverste højre og venstre kant får sin bue *************/
   width: 220px;
   overflow: hidden; /********** Indholdet ude for boksen bliver skjult ***************/
-  border: 3px solid #ad6c54;
+  border: 3px solid var(--color-knapfarve-rammefarve);
 }
 
 .picafmig {
@@ -188,7 +188,7 @@ header {
   border-radius: 80px 80px 0px 0px;
   width: 220px;
   overflow: hidden;
-  border: 3px solid #ad6c54;
+  border: 3px solid var(--color-knapfarve-rammefarve);
   margin-top: 1rem;
 }
 
@@ -230,7 +230,7 @@ header {
 
 /*************** Om mig: 2x uddannelse bokse *********************/
 .boks1 {
-  border: 1.5px solid #ad6c54;
+  border: 1.5px solid var(--color-knapfarve-rammefarve);
   padding: 30px;
   width: 270px;
   margin: 30px auto 20px auto; /****** 30px(top), auto(right, midten) 20px(bottom) auto(left,midten)  ********/
@@ -238,7 +238,7 @@ header {
 }
 
 .boks2 {
-  border: 1.5px solid #ad6c54;
+  border: 1.5px solid var(--color-knapfarve-rammefarve);
   padding: 30px;
   width: 270px;
   margin: 30px auto 20px auto;
@@ -278,7 +278,7 @@ header {
 /*************** Om mig: Værktøjer *********************/
 
 .yderikoner {
-  border: 1.5px solid #ad6c54;
+  border: 1.5px solid var(--color-knapfarve-rammefarve);
   padding: 20px 20px;
   max-width: 500px;
   margin: 3rem auto; /***** top/bottom 3rem og venstre/højre auto (centrer)****/
@@ -469,7 +469,7 @@ button {
 .pic2layout img {
   max-width: 300px;
   margin: 0 auto;
-  border: 1.5px solid #ad6c54;
+  border: 1.5px solid var(--color-knapfarve-rammefarve);
 }
 
 /*************** Projekter: iphoneindhold i tema02 *********************/
