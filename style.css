@@ -203,6 +203,7 @@ header {
   background-color: transparent;
   border: none;
   font-family: "Playfair Display", serif;
+  color: black;
   font-size: 1.1rem;
   font-weight: lighter;
   transition-property: color; /******** Transformerer farven ************/
@@ -355,6 +356,7 @@ header {
 .cta_btn {
   background-color: white;
   border: 1px solid black;
+  color: black;
   padding: 10px 15px;
   margin-top: 2rem;
   font-family: "Playfair Display", serif;
